@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, BookOpen, Microscope, User, Mail, Home as HomeIcon, ExternalLink } from 'lucide-react';
+import profileImage from './assets/profile.jpg';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -302,7 +303,7 @@ function App() {
                   <div className="flex-shrink-0">
                     <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-lg shadow-cyan-400/20">
                       <img 
-                        src="/images/profile.jpg" 
+                        src= {profileImage} 
                         alt="Jeanne Choi" 
                         className="w-full h-full object-cover"
                       />
