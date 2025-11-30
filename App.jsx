@@ -302,7 +302,7 @@ function App() {
                   <div className="flex-shrink-0">
                     <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-lg shadow-cyan-400/20">
                       <img 
-                        src= "/images/profile.jpg"
+                        src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
                         alt="Jeanne Choi" 
                         className="w-full h-full object-cover"
                       />

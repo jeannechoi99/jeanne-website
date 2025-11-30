@@ -2,6 +2,7 @@
   "name": "portfolio-site",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://jeannechoi99.github.io/jeanne-website/",
   "type": "module",
   "scripts": {
     "dev": "vite",
