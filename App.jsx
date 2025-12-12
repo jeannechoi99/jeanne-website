@@ -78,8 +78,8 @@ function App() {
       year: "2024",
       description: "Have you ever thought how your memories full of happiness are wasted?",
       color: "from-orange-400 to-red-400",
-      novelFileEng: "/novels-eng/fade-eng.txt",
-      novelFileKor: "/novels-kor/fade-kor.txt"
+      novelFileEng: "novels-eng/fade-eng.txt",
+      novelFileKor: "novels-kor/fade-kor.txt"
     },
     {
       title: "Cosmic Love",
@@ -87,8 +87,8 @@ function App() {
       year: "2025",
       description: "I could not say goodbye, because of the light I saw.",
       color: "from-pink-400 to-rose-400",
-      novelFileEng: "/novels-eng/cosmic-eng.txt",
-      novelFileKor: "/novels-kor/cosmic-kor.txt"
+      novelFileEng: "novels-eng/cosmic-eng.txt",
+      novelFileKor: "novels-kor/cosmic-kor.txt"
     }
     // ,
     // {
@@ -120,8 +120,10 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     if (filePath) {
+      const fullPath = import.meta.env.BASE_URL + filePath;
+
       try {
-        const response = await fetch(filePath);
+        const response = await fetch(fullPath);
         const text = await response.text();
         
         let html = text
@@ -302,9 +304,9 @@ function App() {
                   <div className="flex-shrink-0">
                     <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-lg shadow-cyan-400/20">
                       <img 
-                        src="/images/profile.jpg"
-                        alt="Jeanne Choi" 
-                        className="w-full h-full object-cover"
+                          src={import.meta.env.BASE_URL + "images/profile.jpg"} 
+                          alt="Jeanne Choi" 
+                          className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
